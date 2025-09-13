@@ -1,0 +1,23 @@
+[
+  {
+    "id": "renegade-immortal",
+    "title": "Renegade Immortal",
+    "genre": "Fantasy",
+    "poster": "assets/poster/renegade-immortal.svg",
+    "description": "Kisah seorang kultivator abadi yang menentang takdir."
+  },
+  {
+    "id": "hero-returns",
+    "title": "Hero Returns",
+    "genre": "Action",
+    "poster": "assets/poster/hero-returns.svg",
+    "description": "Seorang pahlawan kembali setelah lama menghilang."
+  },
+  {
+    "id": "love-in-sky",
+    "title": "Love in the Sky",
+    "genre": "Romance",
+    "poster": "assets/poster/love-in-sky.svg",
+    "description": "Cinta terlarang di antara bintang-bintang."
+  }
+]
