@@ -1,24 +1,56 @@
-[
-  {
-    "id": "renegade-immortal",
-    "title": "Renegade Immortal",
-    "genre": "Fantasy",
-    "poster": "assets/poster/renegade-immortal.svg",
-    "description": "Kisah seorang kultivator abadi yang menentang takdir.",
-    "video": "https://www.youtube.com/embed/ScMzIvxBSi4"
-  },
-  {
-    "id": "hero-returns",
-    "title": "Hero Returns",
-    "genre": "Action",
-    "poster": "assets/poster/hero-returns.svg",
-    "description": "Seorang pahlawan kembali setelah lama menghilang."
-  },
-  {
-    "id": "love-in-sky",
-    "title": "Love in the Sky",
-    "genre": "Romance",
-    "poster": "assets/poster/love-in-sky.svg",
-    "description": "Cinta terlarang di antara bintang-bintang."
-  }
-]
+const movies = [
+  { title: "Legend of Hero 1", genre: "action", poster: "posters/movie1.jpg", url: "https://youtu.be/dQw4w9WgXcQ" },
+  { title: "Romance in Paris", genre: "romance", poster: "posters/movie2.jpg", url: "https://youtu.be/dQw4w9WgXcQ" },
+  { title: "Dragon Fantasy", genre: "fantasy", poster: "posters/movie3.jpg", url: "https://youtu.be/dQw4w9WgXcQ" },
+  { title: "Action Wars", genre: "action", poster: "posters/movie4.jpg", url: "https://youtu.be/dQw4w9WgXcQ" },
+  { title: "Love Forever", genre: "romance", poster: "posters/movie5.jpg", url: "https://youtu.be/dQw4w9WgXcQ" },
+  { title: "Magical Quest", genre: "fantasy", poster: "posters/movie6.jpg", url: "https://youtu.be/dQw4w9WgXcQ" },
+  { title: "Urban Action", genre: "action", poster: "posters/movie7.jpg", url: "https://youtu.be/dQw4w9WgXcQ" },
+  { title: "Romantic Sunset", genre: "romance", poster: "posters/movie8.jpg", url: "https://youtu.be/dQw4w9WgXcQ" },
+  { title: "Fantasy World", genre: "fantasy", poster: "posters/movie9.jpg", url: "https://youtu.be/dQw4w9WgXcQ" },
+  { title: "Hero Returns", genre: "action", poster: "posters/movie10.jpg", url: "https://youtu.be/dQw4w9WgXcQ" },
+
+  { title: "Ocean Love", genre: "romance", poster: "posters/movie11.jpg", url: "https://youtu.be/dQw4w9WgXcQ" },
+  { title: "Mystic Dragon", genre: "fantasy", poster: "posters/movie12.jpg", url: "https://youtu.be/dQw4w9WgXcQ" },
+  { title: "Warrior Spirit", genre: "action", poster: "posters/movie13.jpg", url: "https://youtu.be/dQw4w9WgXcQ" },
+  { title: "Love Story", genre: "romance", poster: "posters/movie14.jpg", url: "https://youtu.be/dQw4w9WgXcQ" },
+  { title: "Castle of Dreams", genre: "fantasy", poster: "posters/movie15.jpg", url: "https://youtu.be/dQw4w9WgXcQ" },
+  { title: "Action Hunter", genre: "action", poster: "posters/movie16.jpg", url: "https://youtu.be/dQw4w9WgXcQ" },
+  { title: "Sweet Romance", genre: "romance", poster: "posters/movie17.jpg", url: "https://youtu.be/dQw4w9WgXcQ" },
+  { title: "Dark Fantasy", genre: "fantasy", poster: "posters/movie18.jpg", url: "https://youtu.be/dQw4w9WgXcQ" },
+  { title: "Fighter Legend", genre: "action", poster: "posters/movie19.jpg", url: "https://youtu.be/dQw4w9WgXcQ" },
+  { title: "Romance Bloom", genre: "romance", poster: "posters/movie20.jpg", url: "https://youtu.be/dQw4w9WgXcQ" },
+
+  { title: "Sky Fantasy", genre: "fantasy", poster: "posters/movie21.jpg", url: "https://youtu.be/dQw4w9WgXcQ" },
+  { title: "Street Fighter", genre: "action", poster: "posters/movie22.jpg", url: "https://youtu.be/dQw4w9WgXcQ" },
+  { title: "Romance Tale", genre: "romance", poster: "posters/movie23.jpg", url: "https://youtu.be/dQw4w9WgXcQ" },
+  { title: "Fantasy King", genre: "fantasy", poster: "posters/movie24.jpg", url: "https://youtu.be/dQw4w9WgXcQ" },
+  { title: "Action Blast", genre: "action", poster: "posters/movie25.jpg", url: "https://youtu.be/dQw4w9WgXcQ" },
+  { title: "Romance Road", genre: "romance", poster: "posters/movie26.jpg", url: "https://youtu.be/dQw4w9WgXcQ" },
+  { title: "Dragon Saga", genre: "fantasy", poster: "posters/movie27.jpg", url: "https://youtu.be/dQw4w9WgXcQ" },
+  { title: "Action Hero", genre: "action", poster: "posters/movie28.jpg", url: "https://youtu.be/dQw4w9WgXcQ" },
+  { title: "Romantic Night", genre: "romance", poster: "posters/movie29.jpg", url: "https://youtu.be/dQw4w9WgXcQ" },
+  { title: "Fantasy Gate", genre: "fantasy", poster: "posters/movie30.jpg", url: "https://youtu.be/dQw4w9WgXcQ" },
+
+  { title: "Action Power", genre: "action", poster: "posters/movie31.jpg", url: "https://youtu.be/dQw4w9WgXcQ" },
+  { title: "Love Island", genre: "romance", poster: "posters/movie32.jpg", url: "https://youtu.be/dQw4w9WgXcQ" },
+  { title: "Fantasy River", genre: "fantasy", poster: "posters/movie33.jpg", url: "https://youtu.be/dQw4w9WgXcQ" },
+  { title: "Battlefield", genre: "action", poster: "posters/movie34.jpg", url: "https://youtu.be/dQw4w9WgXcQ" },
+  { title: "Romantic Dream", genre: "romance", poster: "posters/movie35.jpg", url: "https://youtu.be/dQw4w9WgXcQ" },
+  { title: "Fantasy Crown", genre: "fantasy", poster: "posters/movie36.jpg", url: "https://youtu.be/dQw4w9WgXcQ" },
+  { title: "Action Edge", genre: "action", poster: "posters/movie37.jpg", url: "https://youtu.be/dQw4w9WgXcQ" },
+  { title: "Romance Stars", genre: "romance", poster: "posters/movie38.jpg", url: "https://youtu.be/dQw4w9WgXcQ" },
+  { title: "Fantasy Storm", genre: "fantasy", poster: "posters/movie39.jpg", url: "https://youtu.be/dQw4w9WgXcQ" },
+  { title: "Action Master", genre: "action", poster: "posters/movie40.jpg", url: "https://youtu.be/dQw4w9WgXcQ" },
+
+  { title: "Romance Melody", genre: "romance", poster: "posters/movie41.jpg", url: "https://youtu.be/dQw4w9WgXcQ" },
+  { title: "Fantasy Sky", genre: "fantasy", poster: "posters/movie42.jpg", url: "https://youtu.be/dQw4w9WgXcQ" },
+  { title: "Action Fire", genre: "action", poster: "posters/movie43.jpg", url: "https://youtu.be/dQw4w9WgXcQ" },
+  { title: "Romance Glow", genre: "romance", poster: "posters/movie44.jpg", url: "https://youtu.be/dQw4w9WgXcQ" },
+  { title: "Fantasy Star", genre: "fantasy", poster: "posters/movie45.jpg", url: "https://youtu.be/dQw4w9WgXcQ" },
+  { title: "Action Shadow", genre: "action", poster: "posters/movie46.jpg", url: "https://youtu.be/dQw4w9WgXcQ" },
+  { title: "Romance Rain", genre: "romance", poster: "posters/movie47.jpg", url: "https://youtu.be/dQw4w9WgXcQ" },
+  { title: "Fantasy Flame", genre: "fantasy", poster: "posters/movie48.jpg", url: "https://youtu.be/dQw4w9WgXcQ" },
+  { title: "Action King", genre: "action", poster: "posters/movie49.jpg", url: "https://youtu.be/dQw4w9WgXcQ" },
+  { title: "Romance Heart", genre: "romance", poster: "posters/movie50.jpg", url: "https://youtu.be/dQw4w9WgXcQ" }
+];
