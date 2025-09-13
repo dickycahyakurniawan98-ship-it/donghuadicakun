@@ -1,96 +1,51 @@
-/* Reset dasar */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
+  margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #0f1623;
-  color: #fff;
+  background: #0d1321;
+  color: white;
 }
 
-/* Header */
 header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 12px 20px;
-  background: linear-gradient(90deg, #3a7bd5, #6a11cb);
+  align-items: center;
+  padding: 10px 20px;
+  background: linear-gradient(90deg, #3a7bd5, #3a6073);
 }
 
-.logo {
-  font-size: 20px;
-  font-weight: bold;
+header h1 {
+  margin: 0;
 }
 
-/* Genre buttons */
-#genre-buttons {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  justify-content: center;
-  flex: 1;
+header input {
+  padding: 5px;
 }
 
-#genre-buttons button {
-  background: #fff;
-  color: #333;
+nav {
+  padding: 10px;
+  background: #1c2230;
+}
+
+nav button {
+  margin-right: 10px;
+  padding: 5px 10px;
   border: none;
-  padding: 6px 12px;
-  border-radius: 4px;
   cursor: pointer;
-  font-size: 14px;
-  transition: background 0.3s;
 }
 
-#genre-buttons button:hover {
-  background: #eee;
-}
-
-/* Search */
-#search {
-  padding: 6px 10px;
-  border: none;
-  border-radius: 4px;
-  font-size: 14px;
-}
-
-/* Movies grid */
-.movies-grid {
+#movieList {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 16px;
+  gap: 15px;
   padding: 20px;
 }
 
-.movie-card {
-  background: #1b2330;
-  border-radius: 6px;
-  overflow: hidden;
+.movie {
   text-align: center;
-  transition: transform 0.2s;
+  cursor: pointer;
 }
 
-.movie-card:hover {
-  transform: scale(1.05);
-}
-
-.movie-card img {
+.movie img {
   width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-bottom: 2px solid #333;
-}
-
-.movie-card h3 {
-  font-size: 14px;
-  margin: 8px 0 4px;
-}
-
-.movie-card p {
-  font-size: 12px;
-  color: #aaa;
-  margin-bottom: 8px;
+  border-radius: 8px;
 }
