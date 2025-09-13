@@ -9,12 +9,18 @@
 <body>
   <header>
     <h1>DICAKUN</h1>
-    <input type="text" id="search" placeholder="Cari film...">
+    <input type="text" id="searchInput" placeholder="Cari film..." onkeyup="searchMovies()">
   </header>
 
-  <main id="film-list"></main>
+  <nav id="genreFilter">
+    <button onclick="filterMovies('all')">Semua</button>
+    <button onclick="filterMovies('action')">Action</button>
+    <button onclick="filterMovies('romance')">Romance</button>
+    <button onclick="filterMovies('fantasy')">Fantasy</button>
+  </nav>
 
-  <!-- Script harus urut -->
+  <main id="movieList"></main>
+
   <script src="movies.js"></script>
   <script src="script.js"></script>
 </body>
