@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DICAKUN</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>DICAKUN</h1>
+    <nav>
+      <button onclick="filterGenre('All')">All</button>
+      <button onclick="filterGenre('Action')">Action</button>
+      <button onclick="filterGenre('Fantasy')">Fantasy</button>
+      <button onclick="filterGenre('Romance')">Romance</button>
+      <input type="text" id="searchInput" placeholder="Cari film..." onkeyup="searchMovie()">
+    </nav>
+  </header>
+  <main id="movie-list"></main>
+  <footer>
+    <p>© DICAKUN — deploy Netlify versi final.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
