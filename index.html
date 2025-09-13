@@ -7,25 +7,19 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header -->
   <header>
     <div class="logo">DICAKUN</div>
-    <div class="navbar">
-      <button onclick="filterMovies('all')">All</button>
-      <button onclick="filterMovies('action')">Action</button>
-      <button onclick="filterMovies('fantasy')">Fantasy</button>
-      <button onclick="filterMovies('romance')">Romance</button>
-      <input type="text" id="searchInput" placeholder="Cari film..." onkeyup="searchMovies()" />
-    </div>
+    <nav id="genre-buttons"></nav>
+    <input type="text" id="search" placeholder="Cari film...">
   </header>
 
-  <!-- Grid Film -->
   <main>
-    <div id="movieList"></div>
+    <div id="movies-container" class="movies-grid"></div>
   </main>
 
-  <!-- Script -->
+  <!-- Data film -->
   <script src="movies.js"></script>
+  <!-- Logika aplikasi -->
   <script src="script.js"></script>
 </body>
 </html>
