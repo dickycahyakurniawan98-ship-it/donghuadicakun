@@ -17,7 +17,7 @@ function displayMovies(movies) {
   }
   list.innerHTML = movies.map(m => `
     <div class="movie-card" onclick="goToFilm('${m.id}')">
-      <img src="${m.poster}" alt="${m.title}">
+      <img src="${m.poster}" alt="${m.title}" loading="lazy">
       <h3>${m.title}</h3>
       <p>${m.genre}</p>
     </div>`).join('');
@@ -54,7 +54,7 @@ async function loadFilmDetail() {
     if (movie) {
       detail.innerHTML = `
         <h2>${movie.title}</h2>
-        <img src="${movie.poster}" alt="${movie.title}" style="max-width:200px">
+        <img src="${movie.poster}" alt="${movie.title}" style="max-width:200px" loading="lazy">
         <p><b>Genre:</b> ${movie.genre}</p>
         <p>${movie.description}</p>
       `;
