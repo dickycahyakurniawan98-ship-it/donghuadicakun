@@ -1,10 +1,11 @@
 [
   {
-    "id": "renegade-immortal",
-    "title": "Renegade Immortal",
-    "genre": "Fantasy",
-    "poster": "assets/poster/renegade-immortal.svg",
-    "description": "Kisah seorang kultivator abadi yang menentang takdir."
+  "id": "legend-of-hero",
+  "title": "Legend of Hero",
+  "genre": "Action",
+  "poster": "assets/poster/legend-of-hero.png",
+  "description": "Seorang pahlawan legendaris melawan kegelapan.",
+  "video": "https://www.youtube.com/embed/ScMzIvxBSi4"
   },
   {
     "id": "hero-returns",
