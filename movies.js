@@ -14,7 +14,7 @@ const movies = [
   {
     title: "Dragon Fantasy",
     genre: "fantasy",
-    poster: "posters/movie3.jpg",
+    poster: "assets/posters/renegade-immortal.svg",
     url: "https://youtu.be/dQw4w9WgXcQ"
   }
   // tambahin seterusnya...
