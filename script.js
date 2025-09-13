@@ -1,24 +1,23 @@
 // Render daftar film
-const movieList = document.getElementById('film-list');
+const movieList = document.getElementById("movieList");
 
 function renderMovies(list) {
-  if (!movieList) return; // biar gak error di film.html
   movieList.innerHTML = "";
   list.forEach(movie => {
     const div = document.createElement("div");
     div.className = "movie";
-    div.setAttribute("data-genre", movie.genre);
     div.innerHTML = `
       <img src="${movie.poster}" alt="${movie.title}">
       <h3>${movie.title}</h3>
     `;
-    // arahkan ke detail
-    div.onclick = () => window.location.href = `film.html?id=${movie.id}`;
+    div.onclick = () => {
+      window.location.href = `film.html?id=${movie.id}`;
+    };
     movieList.appendChild(div);
   });
 }
 
-// Filter genre
+// Filter berdasarkan genre
 function filterMovies(genre) {
   if (genre === "all") {
     renderMovies(movies);
@@ -29,33 +28,27 @@ function filterMovies(genre) {
 
 // Pencarian
 function searchMovies() {
-  const input = document.getElementById('search').value.toLowerCase();
+  const input = document.getElementById("searchInput").value.toLowerCase();
   const filtered = movies.filter(m => m.title.toLowerCase().includes(input));
   renderMovies(filtered);
 }
 
-// Render detail film
-function renderFilmDetail() {
-  const detailEl = document.getElementById('film-detail');
-  if (!detailEl) return;
+// Detail film
+const urlParams = new URLSearchParams(window.location.search);
+const filmId = parseInt(urlParams.get("id"));
 
-  const params = new URLSearchParams(window.location.search);
-  const id = parseInt(params.get("id"));
-  const movie = movies.find(m => m.id === id);
-
+if (filmId) {
+  const movie = movies.find(m => m.id === filmId);
   if (movie) {
-    detailEl.innerHTML = `
-      <h2>${movie.title}</h2>
-      <img src="${movie.poster}" alt="${movie.title}">
-      <p>Genre: ${movie.genre}</p>
-    `;
-  } else {
-    detailEl.innerHTML = `<p>Film tidak ditemukan.</p>`;
+    document.getElementById("film-title").innerText = movie.title;
+    document.getElementById("film-genre").innerText = "Genre: " + movie.genre;
+    document.getElementById("film-description").innerText = movie.description;
+    document.getElementById("film-video-src").src = movie.video;
+    document.getElementById("film-video").load();
   }
 }
 
-// Default tampil film di beranda
-if (movieList) renderMovies(movies);
-
-// Tampilkan detail kalau di halaman film.html
-renderFilmDetail();
+// Tampilkan semua film di beranda
+if (movieList) {
+  renderMovies(movies);
+}
