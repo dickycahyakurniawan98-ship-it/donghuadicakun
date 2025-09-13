@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +7,9 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Header -->
   <header>
-    <h1>DICAKUN</h1>
+    <div class="logo">DICAKUN</div>
     <div class="navbar">
       <button onclick="filterMovies('all')">All</button>
       <button onclick="filterMovies('action')">Action</button>
@@ -18,10 +19,13 @@
     </div>
   </header>
 
+  <!-- Grid Film -->
   <main>
-    <div id="movieContainer" class="movie-grid"></div>
+    <div id="movieList"></div>
   </main>
 
+  <!-- Script -->
+  <script src="movies.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
