@@ -1,7 +1,12 @@
-// Contoh data film
-const movies = [
-  { title: "Legend of Hero 1", genre: "action", poster: "posters/movie1.jpg", url: "https://www.youtube.com/embed/dQw4w9WgXcQ" },
-  { title: "Romance in Paris", genre: "romance", poster: "posters/movie2.jpg", url: "https://www.youtube.com/embed/dQw4w9WgXcQ" },
-  { title: "Dragon Fantasy", genre: "fantasy", poster: "posters/movie3.jpg", url: "https://www.youtube.com/embed/dQw4w9WgXcQ" },
-  { title: "Action Wars", genre: "action", poster: "posters/movie4.jpg", url: "https://www.youtube.com/embed/dQw4w9WgXcQ" }
-];
+{
+  title: "Legend of Hero 1",
+  genre: "action",
+  poster: "posters/movie1.jpg", // kalau belum ada, ganti default
+  url: "https://youtu.be/dQw4w9WgXcQ"
+},
+{
+  title: "Romance in Paris",
+  genre: "romance",
+  poster: "posters/default.jpg", // fallback sementara
+  url: "https://youtu.be/dQw4w9WgXcQ"
+}
