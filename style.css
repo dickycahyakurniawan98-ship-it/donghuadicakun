@@ -1,22 +1,26 @@
-/* Header layout */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: #f8fafc;
+}
+
+/* Header */
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 8px 20px; /* lebih ramping */
-  background: linear-gradient(to right, #3b82f6, #9333ea);
+  padding: 8px 20px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
   color: white;
-  height: 55px; /* biar fix tipis */
+  height: 55px;
 }
 
-/* Logo */
-header h1 {
-  font-size: 20px;
+.logo {
+  font-size: 22px;
   font-weight: bold;
-  margin: 0;
 }
 
-/* Menu genre */
 .navbar {
   display: flex;
   align-items: center;
@@ -37,10 +41,47 @@ header h1 {
   background: #ddd;
 }
 
-/* Input search */
 .navbar input {
   padding: 5px 10px;
   border-radius: 6px;
   border: none;
   font-size: 13px;
+}
+
+/* Grid film */
+#movieList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+  padding: 20px;
+}
+
+/* Card film */
+.movie {
+  background: #1e293b;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.movie:hover {
+  transform: scale(1.05);
+}
+
+/* Poster */
+.movie img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Judul */
+.movie h3 {
+  margin: 8px;
+  font-size: 14px;
+  color: #f1f5f9;
+  text-align: center;
 }
