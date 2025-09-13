@@ -1,10 +1,27 @@
-<header>
-  <h1>DICAKUN</h1>
-  <div class="navbar">
-    <button onclick="filterMovies('all')">All</button>
-    <button onclick="filterMovies('action')">Action</button>
-    <button onclick="filterMovies('fantasy')">Fantasy</button>
-    <button onclick="filterMovies('romance')">Romance</button>
-    <input type="text" id="searchInput" placeholder="Cari film..." onkeyup="searchMovies()" />
-  </div>
-</header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DICAKUN</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>DICAKUN</h1>
+    <div class="navbar">
+      <button onclick="filterMovies('all')">All</button>
+      <button onclick="filterMovies('action')">Action</button>
+      <button onclick="filterMovies('fantasy')">Fantasy</button>
+      <button onclick="filterMovies('romance')">Romance</button>
+      <input type="text" id="searchInput" placeholder="Cari film..." onkeyup="searchMovies()" />
+    </div>
+  </header>
+
+  <main>
+    <div id="movieContainer" class="movie-grid"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
