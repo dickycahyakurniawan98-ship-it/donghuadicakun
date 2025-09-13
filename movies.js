@@ -1,10 +1,10 @@
 const movies = [
   {
     id: 1,
-    title: "Hero Returns",
-    genre: "action",
+    title: "Perang Kota (2025)",
+    genre: "action,drama,romance",
     poster: "assets/poster/hero-returns.svg",
-    video: "assets/video/hero-returns.mp4",
+    video: "https://gdplayer.to/embed/?NTI3TzBMUjNIYXI3MUYrQmlrNG5haFprWFpOYTkyQ1Q4YlhyMWdrMDQyZXlKUENua3gvTmhuMFBkVHA5OHdLVDliZVhuOWdqVUpPcGNlRWVQZ29Ma3pjNG5acGlmN2lKc09mT3pNekI2cXgrcnplN2Z5WUlOTlBtelZvMHNFZHhoVkd1S3c0VEZMTTNxekZ0VUtsUEt3PT0,",
     description: "Seorang pahlawan kembali setelah lama menghilang."
   },
   {
