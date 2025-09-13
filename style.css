@@ -1,46 +1,46 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #0f172a;
-  color: white;
-  text-align: center;
-}
+/* Header layout */
 header {
-  background: linear-gradient(90deg, #3b82f6, #9333ea);
-  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 20px; /* lebih ramping */
+  background: linear-gradient(to right, #3b82f6, #9333ea);
+  color: white;
+  height: 55px; /* biar fix tipis */
 }
-nav {
-  margin-top: 1rem;
+
+/* Logo */
+header h1 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
 }
-nav button, nav input {
-  margin: 0.2rem;
-  padding: 0.5rem 1rem;
+
+/* Menu genre */
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navbar button {
+  background: white;
   border: none;
-  border-radius: 5px;
-}
-#movie-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1rem;
-  padding: 1rem;
-}
-.movie-card {
-  background: #1e293b;
-  border-radius: 10px;
-  padding: 0.5rem;
+  padding: 5px 12px;
+  border-radius: 6px;
   cursor: pointer;
-  transition: transform 0.2s;
+  font-size: 13px;
+  transition: 0.2s;
 }
-.movie-card:hover {
-  transform: scale(1.05);
+
+.navbar button:hover {
+  background: #ddd;
 }
-.movie-card img {
-  width: 100%;
-  border-radius: 10px;
-}
-footer {
-  margin-top: 2rem;
-  padding: 1rem;
-  font-size: 0.9rem;
-  color: #94a3b8;
+
+/* Input search */
+.navbar input {
+  padding: 5px 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 13px;
 }
