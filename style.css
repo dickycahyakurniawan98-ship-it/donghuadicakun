@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: white;
+  text-align: center;
+}
+header {
+  background: linear-gradient(90deg, #3b82f6, #9333ea);
+  padding: 1rem;
+}
+nav {
+  margin-top: 1rem;
+}
+nav button, nav input {
+  margin: 0.2rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+}
+#movie-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+.movie-card {
+  background: #1e293b;
+  border-radius: 10px;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.movie-card:hover {
+  transform: scale(1.05);
+}
+.movie-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+footer {
+  margin-top: 2rem;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
