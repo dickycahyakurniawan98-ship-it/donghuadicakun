@@ -1,27 +1,864 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DICAKUN</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Meta Tags -->
+    <title>Donghua Stream - Tonton Anime China Terbaru dan Populer</title>
+    <meta name="description" content="Koleksi lengkap donghua (animasi Tiongkok) terbaru dan terpopuler. Tonton Legendary Twins, Perfect World, dan lainnya sekarang!">
+    <meta name="keywords" content="donghua, anime china, tonton donghua, legendary twins, perfect world, streaming donghua, dark mode">
+    
+    <!-- Open Graph Tags (Social Media Sharing) -->
+    <meta property="og:title" content="Donghua Stream - Tonton Anime China Terbaru dan Populer">
+    <meta property="og:description" content="Koleksi lengkap donghua (animasi Tiongkok) terbaru dan terpopuler.">
+    <meta property="og:image" content="https://placehold.co/1200x630/1a1a1a/e50914?text=Donghua+Stream"> 
+    <meta property="og:url" content="https://example.com/index.html">
+    <meta property="og:type" content="website">
+    
+    <!-- Schema.org Basic Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Donghua Stream",
+      "url": "https://example.com/"
+    }
+    </script>
+    
+    <style>
+        /* CSS DENGAN GAYA DARK MINIMALIS */
+        :root {
+            --primary-red: #e50914; /* Aksen Merah Ala Streaming */
+            --dark-bg: #121212; /* Latar Belakang Sangat Gelap */
+            --card-bg: #1e1e1e; /* Latar Belakang Kartu */
+            --text-light: #f0f0f0;
+            --text-muted: #aaaaaa;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth; /* Tambahkan scroll halus */
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        a {
+            color: var(--text-light);
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: var(--primary-red);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 0 40px 0;
+        }
+
+        /* HEADER & NAVIGASI ATAS */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+            position: sticky; /* Agar tetap terlihat saat scroll */
+            top: 0;
+            z-index: 1000;
+        }
+        
+        /* Baris Navigasi Utama (Logo + Search) */
+        .primary-nav {
+            padding: 15px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap; 
+        }
+
+        .logo {
+            font-size: 1.8em;
+            font-weight: 800;
+            color: var(--primary-red);
+            cursor: pointer;
+        }
+
+        /* Navigasi Kategori (Ongoing, Completed, Movie) */
+        .category-nav {
+            background-color: #0d0d0d; /* Latar belakang lebih gelap untuk kategori */
+            padding: 10px 0;
+        }
+        
+        .nav-links {
+            display: flex;
+            justify-content: flex-start; /* Mulai dari kiri */
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 1.1em;
+            font-weight: 600;
+            padding: 5px 0;
+            position: relative;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-red);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background-color: var(--primary-red);
+            transition: width 0.3s;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+
+        /* SEARCH BAR STYLING */
+        .search-bar {
+            display: flex;
+            align-items: center;
+            max-width: 300px; 
+        }
+
+        .search-bar input[type="text"] {
+            padding: 8px 12px;
+            border: 1px solid #333;
+            border-radius: 5px 0 0 5px;
+            background-color: #2a2a2a;
+            color: var(--text-light);
+            font-size: 0.9em;
+            outline: none;
+            width: 100%;
+            transition: border-color 0.3s;
+        }
+        
+        .search-bar input[type="text"]::placeholder {
+            color: var(--text-muted);
+        }
+
+        .search-bar input[type="text"]:focus {
+            border-color: var(--primary-red);
+        }
+
+        .search-bar button {
+            background-color: var(--primary-red);
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            font-size: 0.9em;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            height: 100%;
+        }
+
+        .search-bar button:hover {
+            background-color: #ff3344;
+        }
+
+        /* SLIDER STYLING */
+        .slider-container {
+            position: relative;
+            max-width: 100%;
+            margin: 20px 0 40px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+        }
+
+        .slide {
+            display: none; 
+            width: 100%;
+            position: relative;
+            animation: fade 0.8s;
+        }
+
+        .slide.active {
+            display: block;
+        }
+
+        .slider-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            aspect-ratio: 3.2 / 1;
+            object-fit: cover;
+        }
+
+        .slide-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 20px 30px;
+            width: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); 
+        }
+
+        .slide-content h3 {
+            font-size: 2.2em;
+            margin-bottom: 5px;
+            color: white;
+        }
+
+        .slide-content p {
+            font-size: 1.1em;
+            color: var(--text-light);
+            max-width: 70%;
+            margin-bottom: 15px;
+        }
+
+        .watch-btn {
+            display: inline-block;
+            background-color: var(--primary-red);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .watch-btn:hover {
+            background-color: #ff3344;
+        }
+
+        /* Slider Dots */
+        .slider-dots {
+            text-align: center;
+            padding: 10px 0;
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+        }
+
+        .dot {
+            height: 10px;
+            width: 10px;
+            margin: 0 4px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background-color: var(--primary-red);
+        }
+
+        @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+        /* END SLIDER STYLING */
+
+
+        /* DONGHUA CARD GRID & SECTION STYLING */
+        main {
+            padding-top: 30px;
+            flex: 1;
+        }
+        
+        /* Tambahkan margin-top agar konten tidak tertutup fixed header */
+        main section:first-child { 
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin: 40px 0 20px;
+            border-left: 5px solid var(--primary-red);
+            padding-left: 15px;
+            font-weight: 700;
+        }
+        
+        /* Memberikan ID pada section agar bisa di-link oleh navbar */
+        #latest-releases-section,
+        #ongoing-section,
+        #completed-section,
+        #movie-section {
+            /* Padding atas ekstra untuk mengakomodasi fixed header saat scroll */
+            padding-top: 70px; 
+            margin-top: -70px; /* Offset margin agar posisi scroll tepat */
+        }
+        
+        #latest-releases-section {
+             /* Hapus offset untuk bagian paling atas agar tidak terlalu jauh ke bawah */
+            padding-top: 0;
+            margin-top: 0;
+        }
+
+
+        .donghua-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 20px;
+        }
+        
+        .donghua-card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+        }
+
+        .donghua-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 20px rgba(229, 9, 20, 0.3);
+        }
+
+        .donghua-card a {
+            display: block;
+            color: inherit;
+        }
+
+        .poster {
+            width: 100%;
+            aspect-ratio: 2 / 3; 
+            object-fit: cover;
+            display: block;
+        }
+
+        .episode-tag {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: var(--primary-red);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.75em;
+            font-weight: bold;
+            z-index: 10;
+        }
+        
+        /* Styling khusus untuk tag Completed */
+        .completed-tag {
+            background-color: #28a745; /* Warna hijau untuk Completed */
+        }
+        
+        /* Styling khusus untuk tag Movie */
+        .movie-tag {
+            background-color: #007bff; /* Warna biru untuk Movie */
+        }
+
+
+        .card-info {
+            padding: 10px;
+            text-align: left;
+        }
+
+        .card-info h3 {
+            font-size: 1em;
+            font-weight: 600;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .card-info .type {
+            font-size: 0.8em;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+        
+        /* FOOTER */
+        footer {
+            background-color: var(--card-bg);
+            color: var(--text-muted);
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        /* PESAN KOSONG */
+        .empty-message {
+            text-align: center;
+            padding: 100px 20px;
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            margin-top: 50px;
+        }
+        
+        .empty-message h2 {
+            font-size: 2em;
+            color: var(--primary-red);
+            margin-bottom: 10px;
+            border: none;
+            padding: 0;
+        }
+        
+        .empty-message p {
+            font-size: 1.2em;
+            color: var(--text-muted);
+        }
+
+        /* RESPONSIVENESS */
+        @media (max-width: 768px) {
+            .slide-content h3 {
+                font-size: 1.5em;
+            }
+            .slide-content p {
+                font-size: 0.9em;
+                max-width: 90%;
+            }
+            .slider-img {
+                aspect-ratio: 16 / 9;
+            }
+            .slider-dots {
+                bottom: 5px;
+                right: 10px;
+            }
+            .nav-links {
+                gap: 20px;
+                overflow-x: auto; /* Memungkinkan scroll horizontal jika ruang tidak cukup */
+                padding-bottom: 5px;
+            }
+            .nav-links li {
+                flex-shrink: 0; /* Mencegah item menciut */
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                width: 95%;
+            }
+            .primary-nav {
+                flex-direction: row; 
+                align-items: center;
+                justify-content: space-between;
+            }
+            .logo {
+                font-size: 1.5em;
+            }
+            .search-bar {
+                width: 40%;
+                max-width: 150px;
+            }
+            .donghua-grid {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+                gap: 15px;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>DICAKUN</h1>
-    <input type="text" id="searchInput" placeholder="Cari film..." onkeyup="searchMovies()">
-  </header>
+    <header>
+        <div class="container primary-nav">
+            <!-- Logo terhubung ke beranda -->
+            <a href="index.html" class="logo">DONGHUA STREAM</a>
+            
+            <!-- SEARCH BAR -->
+            <div class="search-bar">
+                <input type="text" placeholder="Cari judul donghua...">
+                <button type="submit">Cari</button>
+            </div>
+        </div>
+        
+        <!-- NAVIGASI KATEGORI (Ongoing, Completed, Movie) -->
+        <div class="category-nav">
+            <div class="container">
+                <ul class="nav-links">
+                    <!-- Navigasi ke ID Section yang Sesuai -->
+                    <li><a href="#ongoing-section">Ongoing</a></li>
+                    <li><a href="#completed-section">Completed</a></li>
+                    <li><a href="#movie-section">Movie</a></li>
+                    <li><a href="#latest-releases-section">Semua Rilisan</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
 
-  <nav id="genreFilter">
-    <button onclick="filterMovies('all')">Semua</button>
-    <button onclick="filterMovies('action')">Action</button>
-    <button onclick="filterMovies('romance')">Romance</button>
-    <button onclick="filterMovies('fantasy')">Fantasy</button>
-  </nav>
+    <main>
+        <div class="container">
+            <!-- WRAPPER UNTUK KONTEN UTAMA -->
+            <div id="main-data-display">
+                <!-- SLIDER DYNAMICALLY GENERATED HERE -->
+                <section id="featured-section">
+                    <h2>✨ Featured Donghua</h2>
+                    <div class="slider-container" id="slider-container">
+                        <!-- Dynamic Slides will be placed here -->
+                        <div class="slider-dots" id="slider-dots">
+                            <!-- Dynamic Dots will be placed here -->
+                        </div>
+                    </div>
+                </section>
+                <!-- END SLIDER -->
 
-  <main id="movieList"></main>
+                <!-- 1. RILISAN TERBARU (Semua, Diurutkan Terbaru) -->
+                <section id="latest-releases-section">
+                    <h2>⭐ Rilisan Terbaru</h2>
+                    <div class="donghua-grid" id="latest-releases-list">
+                        <!-- Kartu akan diisi dan diurutkan oleh JavaScript -->
+                    </div>
+                </section>
 
-  <script src="movies.js"></script>
-  <script src="script.js"></script>
+                <!-- 2. SEDANG TAYANG (Ongoing) -->
+                <section id="ongoing-section">
+                    <h2>🎬 Sedang Tayang (Ongoing)</h2>
+                    <div class="donghua-grid" id="ongoing-list">
+                        <!-- Kartu Ongoing akan ditempatkan di sini oleh JavaScript -->
+                    </div>
+                </section>
+
+                <!-- 3. SELESAI (Completed) -->
+                <section id="completed-section">
+                    <h2>✅ Selesai (Completed Series)</h2>
+                    <div class="donghua-grid" id="completed-list">
+                        <!-- Kartu Completed akan ditempatkan di sini oleh JavaScript -->
+                    </div>
+                </section>
+                
+                <!-- 4. MOVIE -->
+                <section id="movie-section">
+                    <h2>🎞️ Donghua Movie</h2>
+                    <div class="donghua-grid" id="movie-list">
+                        <!-- Kartu Movie akan ditempatkan di sini oleh JavaScript -->
+                    </div>
+                </section>
+            </div>
+
+
+            <!-- DATA SOURCE: Template untuk semua kartu donghua (disembunyikan) -->
+            <div id="data-source" style="display: none;">
+                <!-- Setiap kartu harus memiliki data-status yang jelas: Ongoing, Completed, atau Movie -->
+                
+                <!-- Donghua Card 1: Legendary Twins (Ongoing) -->
+                <article class="donghua-card" data-status="Ongoing" data-episode="40" data-title="Legendary Twins: Beyond the Sky" data-desc="Aksi fantasi wuxia dengan seni bela diri yang epik. Streaming episode terbaru setiap minggu!" data-image-text="Legendary+Twins">
+                    <a href="detail.html?id=legendary-twins-beyond-the-sky" aria-label="Tonton Legendary Twins: Beyond the Sky">
+                        <img src="https://placehold.co/200x300/e50914/ffffff?text=Legendary+Twins" onerror="this.onerror=null;this.src='https://placehold.co/200x300/e50914/ffffff?text=Legendary+Twins';" alt="Poster Legendary Twins: Beyond the Sky" class="poster">
+                        <span class="episode-tag">Ep 40</span> 
+                        <div class="card-info">
+                            <h3>Legendary Twins: Beyond the Sky</h3>
+                            <p class="type">Donghua | Ongoing</p>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- Donghua Card 2: Perfect World (Ongoing) -->
+                <article class="donghua-card" data-status="Ongoing" data-episode="235" data-title="Perfect World (Shi Hao)" data-desc="Kisah kultivasi abadi yang legendaris, berdasarkan novel populer. Lebih dari 200 episode!" data-image-text="Perfect+World">
+                    <a href="detail.html?id=perfect-world-shi-hao" aria-label="Tonton Perfect World">
+                        <img src="https://placehold.co/200x300/4B0082/ffffff?text=Perfect+World" onerror="this.onerror=null;this.src='https://placehold.co/200x300/4B0082/ffffff?text=Perfect+World';" alt="Poster Perfect World" class="poster">
+                        <span class="episode-tag">Ep 235</span>
+                        <div class="card-info">
+                            <h3>Perfect World</h3>
+                            <p class="type">Donghua | Ongoing</p>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- Donghua Card 3: Against the Sky Supreme (Completed) -->
+                <article class="donghua-card" data-status="Completed" data-episode="450" data-title="Against the Sky Supreme" data-desc="Perjalanan seorang pemuda untuk membalas dendam dan menjadi yang terkuat di langit!" data-image-text="Against+Sky+Supreme">
+                    <a href="detail.html?id=against-the-sky-supreme" aria-label="Tonton Against the Sky Supreme">
+                        <img src="https://placehold.co/200x300/00008B/ffffff?text=Against+Sky+Supreme" onerror="this.onerror=null;this.src='https://placehold.co/200x300/00008B/ffffff?text=Against+Sky+Supreme';" alt="Poster Against the Sky Supreme" class="poster">
+                        <span class="episode-tag">Ep 450</span> 
+                        <div class="card-info">
+                            <h3>Against the Sky Supreme</h3>
+                            <p class="type">Donghua | Completed</p>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- Donghua Card 4: Supreme Alchemy (Ongoing) -->
+                <article class="donghua-card" data-status="Ongoing" data-episode="159" data-title="Supreme Alchemy" data-desc="Pencarian alkemis hebat untuk mencapai kultivasi tertinggi dan keabadian. Fantasi populer." data-image-text="Supreme+Alchemy">
+                    <a href="detail.html?id=supreme-alchemy" aria-label="Tonton Supreme Alchemy">
+                        <img src="https://placehold.co/200x300/800000/ffffff?text=Supreme+Alchemy" onerror="this.onerror=null;this.src='https://placehold.co/200x300/800000/ffffff?text=Supreme+Alchemy';" alt="Poster Supreme Alchemy" class="poster">
+                        <span class="episode-tag">Ep 159</span>
+                        <div class="card-info">
+                            <h3>Supreme Alchemy</h3>
+                            <p class="type">Donghua | Ongoing</p>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- Movie Card 1 -->
+                <article class="donghua-card" data-status="Movie" data-episode="1" data-title="Soul Land Movie: Sword Dao Chen Xin" data-desc="Film spesial dari alam Douluo Dalu yang berfokus pada master pedang yang legendaris." data-image-text="Soul+Land+Movie">
+                    <a href="detail.html?id=soul-land-movie-sword-dao-chen-xin" aria-label="Detail Soul Land Movie: Sword Dao Chen Xin">
+                        <img src="https://placehold.co/200x300/A0522D/ffffff?text=Soul+Land+Movie" onerror="this.onerror=null;this.src='https://placehold.co/200x300/A0522D/ffffff?text=Soul+Land+Movie';" alt="Poster Soul Land Movie: Sword Dao Chen Xin" class="poster">
+                        <span class="episode-tag movie-tag">MOVIE</span> 
+                        <div class="card-info">
+                            <h3>Soul Land Movie: Sword Dao Chen Xin</h3>
+                            <p class="type">Movie | 2024</p>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- Movie Card 2 -->
+                <article class="donghua-card" data-status="Movie" data-episode="1" data-title="Swallowed Star Movie: Blood River Continent" data-desc="Luo Feng kembali dalam film aksi fiksi ilmiah terbaru! Pertempuran di Blood River Continent." data-image-text="Swallowed+Star+Movie">
+                    <a href="detail.html?id=swallowed-star-movie-blood-river-continent" aria-label="Detail Swallowed Star Movie: Blood River Continent">
+                        <img src="https://placehold.co/200x300/556B2F/ffffff?text=Swallowed+Star+Movie" onerror="this.onerror=null;this.src='https://placehold.co/200x300/556B2F/ffffff?text=Swallowed+Star+Movie';" alt="Poster Swallowed Star Movie: Blood River Continent" class="poster">
+                        <span class="episode-tag movie-tag">MOVIE</span>
+                        <div class="card-info">
+                            <h3>Swallowed Star Movie: Blood River Continent</h3>
+                            <p class="type">Movie | 2023</p>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- Donghua Card 5: Peerless Divine Emperor (Ongoing) -->
+                <article class="donghua-card" data-status="Ongoing" data-episode="92" data-title="Peerless Divine Emperor" data-desc="Kisah Raja Roh yang bereinkarnasi dan memulai kembali perjalanannya di dunia kultivasi." data-image-text="Peerless+Divine">
+                    <a href="detail.html?id=peerless-divine-emperor" aria-label="Tonton Peerless Divine Emperor">
+                        <img src="https://placehold.co/200x300/008080/ffffff?text=Peerless+Divine" onerror="this.onerror=null;this.src='https://placehold.co/200x300/008080/ffffff?text=Peerless+Divine';" alt="Poster Peerless Divine Emperor" class="poster">
+                        <span class="episode-tag">Ep 92</span>
+                        <div class="card-info">
+                            <h3>Peerless Divine Emperor</h3>
+                            <p class="type">Donghua | Ongoing</p>
+                        </div>
+                    </a>
+                </article>
+                
+                <!-- Donghua Card 6: Martial Conqueror of the Cosmos (Ongoing) -->
+                <article class="donghua-card" data-status="Ongoing" data-episode="17" data-title="Martial Conqueror of the Cosmos" data-desc="Kisah Wu Xiao, seorang jenius bela diri yang menaklukkan alam semesta. Aksi fantasi." data-image-text="Martial+Conqueror">
+                    <a href="detail.html?id=martial-conqueror-of-the-cosmos" aria-label="Tonton Martial Conqueror of the Cosmos">
+                        <img src="https://placehold.co/200x300/36454F/ffffff?text=Martial+Conqueror" onerror="this.onerror=null;this.src='https://placehold.co/200x300/36454F/ffffff?text=Martial+Conqueror';" alt="Poster Martial Conqueror of the Cosmos" class="poster">
+                        <span class="episode-tag">Ep 17</span>
+                        <div class="card-info">
+                            <h3>Martial Conqueror of the Cosmos</h3>
+                            <p class="type">Donghua | Ongoing</p>
+                        </div>
+                    </a>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Donghua Stream. Dibuat dengan cinta untuk penggemar Wuxia & Xianxia.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // --- FUNGSI UTILITY ---
+            // Fungsi untuk mengupdate tag episode
+            function updateCardTag(cardElement, status, episode) {
+                const tag = cardElement.querySelector('.episode-tag');
+                if (!tag) return;
+
+                if (status === 'Completed') {
+                    tag.textContent = 'Completed';
+                    tag.classList.add('completed-tag');
+                    tag.classList.remove('movie-tag'); 
+                } else if (status === 'Movie') {
+                    tag.textContent = 'MOVIE';
+                    tag.classList.add('movie-tag');
+                    tag.classList.remove('completed-tag'); 
+                } else {
+                    tag.textContent = `Ep ${episode}`;
+                    tag.classList.remove('completed-tag', 'movie-tag'); 
+                }
+            }
+
+
+            // --- PENGOLAHAN DATA DAN GENERASI KONTEN ---
+            
+            // Ambil semua data kartu dari data-source
+            const allCards = Array.from(document.querySelectorAll('#data-source .donghua-card'));
+            
+            // Dapatkan kontainer tujuan
+            const mainDataDisplay = document.getElementById('main-data-display');
+            const sliderContainer = document.getElementById('slider-container');
+            const sliderDots = document.getElementById('slider-dots');
+            const featuredSection = document.getElementById('featured-section');
+            const latestReleasesList = document.getElementById('latest-releases-list');
+            const ongoingList = document.getElementById('ongoing-list');
+            const completedList = document.getElementById('completed-list'); 
+            const movieList = document.getElementById('movie-list');         
+
+            // 1. CEK KETERSEDIAAN DATA
+            if (allCards.length === 0) {
+                // Jika tidak ada kartu, sembunyikan semua section dan tampilkan pesan kosong
+                mainDataDisplay.style.display = 'none';
+                
+                const emptyMessageHtml = `
+                    <div class="empty-message">
+                        <h2>Beranda Kosong 😥</h2>
+                        <p>Belum ada donghua yang diposting. Tambahkan kartu ke dalam <code>div#data-source</code> untuk mulai menampilkan konten.</p>
+                    </div>
+                `;
+                mainDataDisplay.insertAdjacentHTML('beforebegin', emptyMessageHtml);
+                return; // Hentikan eksekusi script selanjutnya
+            }
+
+
+            // Bersihkan kontainer sebelum menambahkan kartu baru
+            const dynamicSlides = [];
+            const dynamicDots = [];
+            
+            // 2. GENERATE SLIDER & KARTU GRID (Hanya jika ada data)
+            
+            // Urutkan kartu berdasarkan episode tertinggi (asumsi rilisan terbaru)
+            const sortedCards = allCards
+                .map(card => {
+                    const episode = parseInt(card.getAttribute('data-episode') || '0');
+                    return { element: card, episode: episode };
+                })
+                .sort((a, b) => b.episode - a.episode);
+            
+            // Ambil 3 kartu teratas untuk slider
+            const featuredCards = sortedCards.slice(0, 3);
+
+
+            featuredCards.forEach((item, index) => {
+                const originalCard = item.element;
+                const title = originalCard.getAttribute('data-title');
+                const desc = originalCard.getAttribute('data-desc');
+                const imageText = originalCard.getAttribute('data-image-text');
+                
+                // Buat Slide (HTML)
+                const slideDiv = document.createElement('div');
+                slideDiv.classList.add('slide', 'featured-card');
+                if (index === 0) slideDiv.classList.add('active'); // Aktifkan slide pertama
+                
+                // Gunakan imageText untuk membuat URL placeholder slider yang lebih lebar
+                const imageUrl = `https://placehold.co/1280x400/e50914/ffffff?text=${imageText}`;
+
+                slideDiv.innerHTML = `
+                    <img src="${imageUrl}" onerror="this.onerror=null;this.src='${imageUrl}';" alt="${title}" class="slider-img">
+                    <div class="slide-content">
+                        <h3>${title}</h3>
+                        <p>${desc}</p>
+                        <a href="${originalCard.querySelector('a').href}" class="watch-btn">Tonton Sekarang</a>
+                    </div>
+                `;
+                dynamicSlides.push(slideDiv);
+
+                // Buat Dot (HTML)
+                const dotSpan = document.createElement('span');
+                dotSpan.classList.add('dot');
+                if (index === 0) dotSpan.classList.add('active');
+                dotSpan.setAttribute('data-index', index);
+                dynamicDots.push(dotSpan);
+            });
+            
+            // Masukkan slide dan dots ke dalam DOM
+            if (dynamicSlides.length > 0) {
+                 dynamicSlides.forEach(slide => sliderContainer.insertBefore(slide, sliderDots));
+                 dynamicDots.forEach(dot => sliderDots.appendChild(dot));
+            } else {
+                // Jika tidak ada featured card, sembunyikan section slider
+                featuredSection.style.display = 'none';
+            }
+
+
+            // 3. FILL GRID SECTIONS (Latest, Ongoing, Completed, Movie)
+            
+            // Bersihkan list sebelum mengisi
+            latestReleasesList.innerHTML = '';
+            ongoingList.innerHTML = '';
+            completedList.innerHTML = '';
+            movieList.innerHTML = '';
+
+            let hasOngoing = false;
+            let hasCompleted = false;
+            let hasMovie = false;
+
+
+            sortedCards.forEach(item => {
+                const originalCard = item.element;
+                const status = originalCard.getAttribute('data-status');
+                const episode = originalCard.getAttribute('data-episode');
+                
+                // Kloning kartu untuk dimasukkan ke berbagai section
+                const cardClone = originalCard.cloneNode(true);
+                
+                // PERHATIAN: Update TAG untuk semua kloning kartu
+                updateCardTag(cardClone, status, episode);
+
+                // Tambahkan ke Rilisan Terbaru (sudah diurutkan)
+                latestReleasesList.appendChild(originalCard.cloneNode(true));
+                updateCardTag(latestReleasesList.lastElementChild, status, episode);
+                
+                // Tambahkan ke kategori spesifik
+                if (status === 'Ongoing') {
+                    ongoingList.appendChild(cardClone);
+                    hasOngoing = true;
+                } else if (status === 'Completed') {
+                    completedList.appendChild(cardClone);
+                    hasCompleted = true;
+                } else if (status === 'Movie') {
+                    movieList.appendChild(cardClone);
+                    hasMovie = true;
+                }
+            });
+            
+            // Sembunyikan section kategori jika kosong
+            document.getElementById('ongoing-section').style.display = hasOngoing ? 'block' : 'none';
+            document.getElementById('completed-section').style.display = hasCompleted ? 'block' : 'none';
+            document.getElementById('movie-section').style.display = hasMovie ? 'block' : 'none';
+
+
+            // 4. SLIDER LOGIC (diaktifkan hanya jika ada slide)
+            
+            let slideIndex = 0;
+            const slides = document.querySelectorAll('.slide');
+            const dots = document.querySelectorAll('.dot');
+            
+            function showSlides() {
+                if (slides.length === 0) return; // Jangan jalankan jika kosong
+                
+                slides.forEach(slide => slide.classList.remove('active'));
+                dots.forEach(dot => dot.classList.remove('active'));
+
+                if (slideIndex >= slides.length) {
+                    slideIndex = 0;
+                } else if (slideIndex < 0) {
+                    slideIndex = slides.length - 1;
+                }
+
+                slides[slideIndex].classList.add('active');
+                dots[slideIndex].classList.add('active');
+
+                slideIndex++;
+                
+                setTimeout(showSlides, 5000); 
+            }
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    slideIndex = index;
+                    
+                    slides.forEach(slide => slide.classList.remove('active'));
+                    dots.forEach(d => d.classList.remove('active'));
+                    slides[index].classList.add('active');
+                    dots[index].classList.add('active');
+                    
+                    slideIndex = index + 1; 
+                });
+            });
+
+            if (slides.length > 0) {
+                showSlides();
+            }
+        });
+    </script>
 </body>
 </html>
