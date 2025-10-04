@@ -62,6 +62,25 @@
         </nav>
     </header>
 
+    <!-- Placeholder Iklan Adsterra (ATAS) -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-4">
+        <!-- Banner 728x90 (Desktop/Tablet) - HANYA MUNCUL PADA MD KE ATAS -->
+        <div class="hidden md:flex justify-center w-full">
+            <!-- Ganti konten di bawah ini dengan kode Adsterra 728x90 Anda -->
+            <div class="w-[728px] h-[90px] bg-gray-900 rounded-lg flex items-center justify-center text-orange-500 border border-dashed border-orange-700/50 p-2 text-center text-sm">
+                <p>Iklan Banner Adsterra 728x90 (ATAS) - Ganti dengan Kode Iklan Anda</p>
+            </div>
+        </div>
+        <!-- Banner 320x50 (Mobile) - HANYA MUNCUL PADA MOBILE -->
+        <div class="flex md:hidden justify-center w-full">
+            <!-- Ganti konten di bawah ini dengan kode Adsterra 320x50/300x250 Mobile Anda -->
+            <div class="w-[320px] h-[50px] bg-gray-900 rounded-lg flex items-center justify-center text-orange-500 border border-dashed border-orange-700/50 p-2 text-center text-xs mx-auto">
+                <p>Iklan Mobile Adsterra 320x50 (ATAS) - Ganti dengan Kode Iklan Mobile Anda</p>
+            </div>
+        </div>
+    </div>
+    <!-- Akhir Placeholder Iklan Adsterra (ATAS) -->
+
     <!-- KONTEN UTAMA Halaman Detail -->
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         
@@ -76,8 +95,14 @@
                 <!-- Video Player Utama -->
                 <!-- Menambahkan shadow-orange-900/50 untuk bayangan oranye gelap -->
                 <div class="video-container mb-6 bg-gray-900 rounded-xl shadow-2xl shadow-orange-900/50">
-                    <!-- Embed Video Placeholder (Ganti dengan kode embed Anda yang sebenarnya) -->
-                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=7YjGgX8T0n9Z8t8r" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <!-- Embed Video Player yang Akan Diperbarui oleh JS -->
+                    <!-- SRC Awal diatur ke about:blank, akan langsung diisi oleh JS dengan episode terbaru. -->
+                    <iframe id="video-player" 
+                            src="about:blank" 
+                            title="Video Player Donghua" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen></iframe>
                 </div>
 
                 <!-- Detail dan Deskripsi -->
@@ -106,7 +131,7 @@
 
                     <h3 class="text-xl font-bold mb-2 text-white">Sinopsis</h3>
                     <p class="text-gray-400 leading-relaxed">
-                        Di dunia di mana kekuatan mendominasi segalanya, Xiao Yan, seorang jenius muda yang kehilangan kekuatannya, bertekad untuk membalas dendam dan merebut kembali kejayaannya. Dengan bantuan Yao Lao, seorang alkemis legendaris, ia memulai perjalanan kultivasi yang berbahaya, menghadapi musuh kuat dan menemukan rahasia kuno yang mengubah nasibnya.
+                        Di dunia di mana kekuatan mendominasi segalanya, Xiao Yan, seorang jenius muda yang kehilangan kekuatannya, bertekad untuk membalas dendam dan merebut kembali kejayaannya. Dengan bantuan Yao Lao, seorang alkemis legendaris, ia memulai perjalanan kultivasi kultivasi yang berbahaya, menghadapi musuh kuat dan menemukan rahasia kuno yang mengubah nasibnya.
                     </p>
                 </div>
             </div>
@@ -115,40 +140,47 @@
             <div class="lg:col-span-1">
                 <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700">
                     <h2 class="text-3xl font-bold mb-4 text-white border-b border-gray-700 pb-2">Daftar Episode</h2>
-                    <div class="episode-list space-y-2 max-h-96 overflow-y-auto pr-2">
-                        
-                        <!-- Loop Daftar Episode -->
-                        <!-- Warna hover episode diubah menjadi orange-700/70 -->
-                        <a href="#" class="block p-3 bg-gray-700 hover:bg-orange-700/70 rounded-lg transition duration-200">
-                            <span class="font-semibold text-lg text-white">Episode 104 (Terbaru)</span>
-                            <span class="text-sm text-gray-300 float-right">1 Hari Lalu</span>
-                        </a>
-                        <a href="#" class="block p-3 bg-gray-700 hover:bg-orange-700/70 rounded-lg transition duration-200">
-                            <span class="font-semibold text-lg text-white">Episode 103</span>
-                            <span class="text-sm text-gray-300 float-right">Minggu Lalu</span>
-                        </a>
-                        <!-- Contoh episode lainnya (Dummy) -->
-                        <a href="#" class="block p-3 bg-gray-700 hover:bg-orange-700/70 rounded-lg transition duration-200"><span class="font-semibold text-lg text-white">Episode 102</span></a>
-                        <a href="#" class="block p-3 bg-gray-700 hover:bg-orange-700/70 rounded-lg transition duration-200"><span class="font-semibold text-lg text-white">Episode 101</span></a>
-                        <a href="#" class="block p-3 bg-gray-700 hover:bg-orange-700/70 rounded-lg transition duration-200"><span class="font-semibold text-lg text-white">Episode 100</span></a>
-                        <a href="#" class="block p-3 bg-gray-700 hover:bg-orange-700/70 rounded-lg transition duration-200"><span class="font-semibold text-lg text-white">Episode 99</span></a>
-                        <a href="#" class="block p-3 bg-gray-700 hover:bg-orange-700/70 rounded-lg transition duration-200"><span class="font-semibold text-lg text-white">Episode 98</span></a>
-                        <a href="#" class="block p-3 bg-gray-700 hover:bg-orange-700/70 rounded-lg transition duration-200"><span class="font-semibold text-lg text-white">Episode 97</span></a>
-                        <a href="#" class="block p-3 bg-gray-700 hover:bg-orange-700/70 rounded-lg transition duration-200"><span class="font-semibold text-lg text-white">Episode 96</span></a>
-                        <a href="#" class="block p-3 bg-gray-700 hover:bg-orange-700/70 rounded-lg transition duration-200"><span class="font-semibold text-lg text-white">Episode 95</span></a>
-                        <a href="#" class="block p-3 bg-gray-700 hover:bg-orange-700/70 rounded-lg transition duration-200"><span class="font-semibold text-lg text-white">Episode 94</span></a>
-                        <a href="#" class="block p-3 bg-gray-700 hover:bg-orange-700/70 rounded-lg transition duration-200"><span class="font-semibold text-lg text-white">Episode 93</span></a>
-                        <a href="#" class="block p-3 bg-gray-700 hover:bg-orange-700/70 rounded-lg transition duration-200"><span class="font-semibold text-lg text-white">Episode 92</span></a>
-                        <a href="#" class="block p-3 bg-gray-700 hover:bg-orange-700/70 rounded-lg transition duration-200"><span class="font-semibold text-lg text-white">Episode 91</span></a>
-                        <a href="#" class="block p-3 bg-gray-700 hover:bg-orange-700/70 rounded-lg transition duration-200"><span class="font-semibold text-lg text-white">Episode 90</span></a>
-
-                        <!-- Akhir Loop Daftar Episode -->
+                    
+                    <!-- Container untuk Daftar Episode (max-h dipertahankan untuk scroll otomatis) -->
+                    <div id="episode-list-container" class="episode-list space-y-2 max-h-[600px] overflow-y-auto pr-2">
+                        <!-- Episode akan dimasukkan di sini oleh JavaScript -->
                     </div>
+
+                    <!-- Kontrol Paginasi (Prev dan Next) -->
+                    <div class="flex justify-between items-center mt-4">
+                        <button id="prev-page-btn" class="w-1/2 mr-1 py-2 rounded-lg bg-orange-700 hover:bg-orange-600 text-white font-semibold transition duration-200 shadow-md shadow-orange-900/50 disabled:bg-gray-600 disabled:shadow-none" disabled>
+                            &larr; Prev
+                        </button>
+                        <span id="page-info" class="text-sm text-gray-400 whitespace-nowrap px-2">Halaman 1/11</span>
+                        <button id="next-page-btn" class="w-1/2 ml-1 py-2 rounded-lg bg-orange-700 hover:bg-orange-600 text-white font-semibold transition duration-200 shadow-md shadow-orange-900/50 disabled:bg-gray-600 disabled:shadow-none">
+                            Next &rarr;
+                        </button>
+                    </div>
+                    
                 </div>
             </div>
         </div>
 
     </main>
+
+    <!-- Placeholder Iklan Adsterra (BAWAH) -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-8">
+        <!-- Banner 728x90 (Desktop/Tablet) - HANYA MUNCUL PADA MD KE ATAS -->
+        <div class="hidden md:flex justify-center w-full">
+            <!-- Ganti konten di bawah ini dengan kode Adsterra 728x90 Anda -->
+            <div class="w-[728px] h-[90px] bg-gray-900 rounded-lg flex items-center justify-center text-orange-500 border border-dashed border-orange-700/50 p-2 text-center text-sm">
+                <p>Iklan Banner Adsterra 728x90 (BAWAH) - Ganti dengan Kode Iklan Anda</p>
+            </div>
+        </div>
+        <!-- Banner 320x50 (Mobile) - HANYA MUNCUL PADA MOBILE -->
+        <div class="flex md:hidden justify-center w-full">
+            <!-- Ganti konten di bawah ini dengan kode Adsterra 320x50/300x250 Mobile Anda -->
+            <div class="w-[320px] h-[50px] bg-gray-900 rounded-lg flex items-center justify-center text-orange-500 border border-dashed border-orange-700/50 p-2 text-center text-xs mx-auto">
+                <p>Iklan Mobile Adsterra 320x50 (BAWAH) - Ganti dengan Kode Iklan Mobile Anda</p>
+            </div>
+        </div>
+    </div>
+    <!-- Akhir Placeholder Iklan Adsterra (BAWAH) -->
 
     <!-- FOOTER -->
     <!-- Border diubah menjadi orange-700 -->
@@ -156,7 +188,7 @@
         &copy; 2024 Donghua Stream Project. Dibuat dengan Tailwind CSS. Diuji coba oleh Gemini.
     </footer>
 
-    <!-- Logika Inisialisasi Firebase (Dipertahankan untuk konsistensi) -->
+    <!-- Logika Inisialisasi Firebase & Rendering Episode -->
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
         import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
@@ -164,11 +196,54 @@
         
         const firebaseConfig = JSON.parse(typeof __firebase_config !== 'undefined' ? __firebase_config : '{}');
         let auth;
+        const EPISODES_PER_PAGE = 10; // Batasan episode per halaman
+        let currentPage = 1;
+        let totalPages = 1;
+        let episodes = []; // Array global untuk menyimpan data episode
+        const videoPlayer = document.getElementById('video-player');
+        
+        // --- DATA EMBED MULTI-PLATFORM (URL LENGKAP) ---
+        // PENTING: GANTI URL DUMMY INI DENGAN URL EMBED ASLI ANDA (YouTube/DailyMotion/dll)
+        // URL harus berupa link yang valid untuk disematkan di IFRAME.
+        const DUMMY_EMBED_URLS = [
+            // Episode 104 (Contoh DailyMotion)
+            "https://www.dailymotion.com/embed/video/x8s4v6r?autoplay=1", 
+            
+            // Episode 103 (Contoh YouTube)
+            "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1", 
+            
+            // Episode 102 (Contoh DailyMotion lain)
+            "https://www.dailymotion.com/embed/video/x8s4v6t?autoplay=1", 
+            
+            // Episode 101 (Contoh YouTube lain)
+            "https://www.youtube.com/embed/g-VjXf4e9_U?autoplay=1", 
+            
+            // Episode 100
+            "https://www.dailymotion.com/embed/video/x8s4v6v?autoplay=1", 
+            
+            // Episode 99
+            "https://www.youtube.com/embed/1v0T2c0bK2M?autoplay=1", 
+            
+            // Episode 98
+            "https://www.dailymotion.com/embed/video/x8s4v6x?autoplay=1", 
+            
+            // Episode 97
+            "https://www.youtube.com/embed/tM0N76b97lQ?autoplay=1", 
+            
+            // Episode 96
+            "https://www.dailymotion.com/embed/video/x8s4v6z?autoplay=1", 
+            
+            // Episode 95
+            "https://www.youtube.com/embed/J7g1vRjQ6Hw?autoplay=1", 
+            
+            // Tambahkan 94 URL unik lainnya di sini (total 104)
+        ];
+
+        // ----------------------------------------
 
         if (Object.keys(firebaseConfig).length > 0) {
             const app = initializeApp(firebaseConfig);
             auth = getAuth(app);
-            // const db = getFirestore(app); // db tidak digunakan di halaman ini, jadi bisa dikomentari
         } else {
             console.warn("Firebase configuration not found. Skipping initialization.");
         }
@@ -204,9 +279,143 @@
             });
         }
         
+        /**
+         * Mengganti video player dengan episode yang dipilih
+         * @param {string} embedUrl - URL embed lengkap dari video (YouTube, DailyMotion, dll.)
+         * @param {string} episodeTitle - Judul episode untuk di set di iframe title
+         */
+        function loadEpisode(embedUrl, episodeTitle) {
+            if (videoPlayer) {
+                videoPlayer.src = embedUrl; // Menggunakan URL lengkap
+                videoPlayer.title = episodeTitle;
+            }
+        }
+
+
+        function setupEpisodeView() {
+            const container = document.getElementById('episode-list-container');
+            const prevBtn = document.getElementById('prev-page-btn');
+            const nextBtn = document.getElementById('next-page-btn');
+            const pageInfo = document.getElementById('page-info');
+            const totalEpisodesCount = 104;
+
+            // 1. Buat Data Episode (104 Episode, dibalik agar yang terbaru di atas)
+            for (let i = totalEpisodesCount; i >= 1; i--) {
+                
+                let embedUrl;
+                let isDummy = false;
+
+                // Ambil URL dari array jika tersedia
+                if (totalEpisodesCount - i < DUMMY_EMBED_URLS.length) {
+                    // Gunakan URL unik dari DUMMY_EMBED_URLS (untuk episode terbaru)
+                    embedUrl = DUMMY_EMBED_URLS[totalEpisodesCount - i]; 
+                } else {
+                    // Jika URL asli sudah habis, gunakan URL terakhir di array sebagai placeholder dummy
+                    embedUrl = DUMMY_EMBED_URLS[DUMMY_EMBED_URLS.length - 1];
+                    // Tambahkan indikator dummy agar mudah dikenali
+                    isDummy = true; 
+                }
+                
+                let label = `Episode ${i}`;
+                // Tentukan label terbaru (Episode 104, yaitu episode pertama dalam array)
+                if (i === totalEpisodesCount) label += ' (Terbaru)'; 
+                
+                let time = '';
+                if (i === totalEpisodesCount) time = '1 Hari Lalu';
+                else if (i === totalEpisodesCount - 1) time = 'Minggu Lalu';
+
+                episodes.push({
+                    id: i,
+                    title: label,
+                    time: time,
+                    embedUrl: embedUrl, // URL embed lengkap
+                    isDummy: isDummy
+                });
+            }
+            
+            // Hitung total halaman
+            totalPages = Math.ceil(episodes.length / EPISODES_PER_PAGE);
+
+            // 2. Fungsi untuk merender episode berdasarkan halaman
+            const renderEpisodes = () => {
+                const startIndex = (currentPage - 1) * EPISODES_PER_PAGE;
+                const endIndex = startIndex + EPISODES_PER_PAGE;
+                const displayEpisodes = episodes.slice(startIndex, endIndex);
+                
+                container.innerHTML = '';
+                
+                displayEpisodes.forEach(ep => {
+                    const episodeLink = document.createElement('a');
+                    episodeLink.href = "#"; // Ganti '#' dengan link yang sebenarnya jika ada
+                    episodeLink.className = "block p-3 bg-gray-700 hover:bg-orange-700/70 rounded-lg transition duration-200";
+                    
+                    // Tampilkan status dummy jika URL-nya adalah placeholder
+                    const urlInfo = ep.isDummy 
+                        ? `<span class="text-xs text-red-400 float-right mt-1 ml-2"> (DUMMY URL)</span>`
+                        : '';
+
+                    episodeLink.innerHTML = `
+                        <span class="font-semibold text-lg text-white">${ep.title}</span>
+                        ${urlInfo}
+                        ${ep.time ? `<span class="text-sm text-gray-300 float-right">${ep.time}</span>` : ''}
+                    `;
+                    
+                    // Tambahkan event listener untuk memuat video ketika link episode diklik
+                    episodeLink.addEventListener('click', (e) => {
+                        e.preventDefault(); // Mencegah pindah halaman
+                        
+                        // Cek apakah URL adalah dummy (hanya untuk peringatan)
+                        if (ep.isDummy) {
+                            console.error(`URL video untuk ${ep.title} adalah URL dummy. Harap ganti dengan URL embed asli.`);
+                            // Menggunakan custom modal/message box daripada alert()
+                            const message = `Gagal memuat video: URL video untuk ${ep.title} adalah URL dummy. Mohon ganti URL embed di kode. Menggunakan video placeholder terakhir.`;
+                            console.warn(message);
+                        }
+                        
+                        loadEpisode(ep.embedUrl, ep.title);
+                        // Opsional: Gulir kembali ke atas halaman untuk melihat video baru dimuat
+                        window.scrollTo({ top: 0, behavior: 'smooth' }); 
+                    });
+
+                    container.appendChild(episodeLink);
+                });
+
+                // 3. Update Status Paginasi dan Tombol
+                pageInfo.textContent = `Halaman ${currentPage}/${totalPages}`;
+                
+                prevBtn.disabled = currentPage === 1;
+                nextBtn.disabled = currentPage === totalPages;
+            };
+
+            // 4. Event listener untuk tombol Prev
+            prevBtn.addEventListener('click', () => {
+                if (currentPage > 1) {
+                    currentPage--;
+                    renderEpisodes();
+                }
+            });
+
+            // 5. Event listener untuk tombol Next
+            nextBtn.addEventListener('click', () => {
+                if (currentPage < totalPages) {
+                    currentPage++;
+                    renderEpisodes();
+                }
+            });
+            
+            // Render episode awal
+            renderEpisodes();
+            
+            // Muat episode terbaru (episodes[0]) saat halaman dimuat
+            // Ini akan menggantikan src="about:blank" di HTML
+            loadEpisode(episodes[0].embedUrl, episodes[0].title);
+           
+        }
+        
         // Jalankan semua setelah halaman dimuat
         window.onload = function () {
             authenticate();
+            setupEpisodeView(); // Setup logika paginasi dan pemuatan video
         }
 
     </script>
