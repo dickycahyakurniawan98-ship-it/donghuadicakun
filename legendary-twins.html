@@ -1,165 +1,214 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Legendary Twins: Beyond the Sky - Detail</title>
-  <style>
-    :root {
-      --primary-red: #e50914; 
-      --dark-bg: #121212; 
-      --card-bg: #1e1e1e; 
-      --text-light: #f0f0f0;
-      --text-muted: #aaaaaa;
-    }
-    * {margin:0; padding:0; box-sizing:border-box;}
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--dark-bg);
-      color: var(--text-light);
-      line-height: 1.6;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-    header {
-      background: var(--card-bg);
-      padding: 15px 0;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.4);
-    }
-    .container {
-      width: 95%;
-      max-width: 1000px;
-      margin: auto;
-      padding: 20px 0;
-    }
-    .logo a {
-      font-size: 1.5em;
-      font-weight: 800;
-      color: var(--primary-red);
-      text-decoration: none;
-    }
-    .search-bar {margin-top: 10px;}
-    .search-bar input {
-      width: 100%;
-      max-width: 400px;
-      padding: 8px;
-      border-radius: 6px;
-      border: none;
-      outline: none;
-      background: #222;
-      color: var(--text-light);
-    }
-    h1 {margin:20px 0;}
-    .detail-info {display:flex; gap:20px; margin:20px 0; flex-wrap:wrap;}
-    .poster-wrapper {flex:0 0 200px;}
-    .poster-wrapper img {width:100%; border-radius:8px;}
-    .info-section {flex:1;}
-    .metadata {display:flex; flex-wrap:wrap; gap:8px; margin:15px 0;}
-    .metadata span {
-      background: var(--card-bg);
-      padding:6px 12px;
-      border-radius:6px;
-      font-size:0.9em;
-    }
-    .labels {margin:20px 0;}
-    .labels h3 {margin-bottom:10px;}
-    .label-list {display:flex; flex-wrap:wrap; gap:8px;}
-    .label-list a {
-      padding:6px 12px;
-      background: var(--card-bg);
-      border-radius:20px;
-      font-size:.85em;
-      color: var(--text-light);
-      text-decoration: none;
-      transition:.3s;
-    }
-    .label-list a:hover {background: var(--primary-red);}
-    .episode-list {margin-top:30px;}
-    .episode-list ul {
-      list-style:none;
-      display:grid;
-      grid-template-columns: repeat(auto-fill,minmax(100px,1fr));
-      gap:10px;
-      padding:0;
-    }
-    .episode-list li a {
-      display:block;
-      background: var(--card-bg);
-      padding:10px;
-      text-align:center;
-      border-radius:6px;
-      transition:.3s;
-      color: var(--text-light);
-      text-decoration:none;
-    }
-    .episode-list li a:hover {background: var(--primary-red);}
-    footer {
-      text-align:center;
-      padding:15px;
-      background: var(--card-bg);
-      color: var(--text-muted);
-      margin-top:auto;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nonton Battle Through the Heavens (BTTH) - Detail & Episode</title>
+    <!-- Memuat Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Mengatur font agar terlihat lebih modern */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1117; /* Latar belakang sangat gelap */
+            color: #e5e7eb; /* Teks terang */
+        }
+        /* Style untuk membuat video embed responsif (aspek rasio 16:9) */
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio (9/16 * 100) */
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 0.75rem; /* Menyesuaikan dengan rounded-xl di Tailwind */
+        }
+
+        /* Styling untuk scrollbar (hanya untuk tampilan episode) */
+        .episode-list::-webkit-scrollbar {
+            width: 8px;
+        }
+        .episode-list::-webkit-scrollbar-thumb {
+            background: #c2410c; /* Orange-700 untuk scrollbar */
+            border-radius: 10px;
+        }
+        .episode-list::-webkit-scrollbar-track {
+            background: #161b22;
+        }
+    </style>
 </head>
-<body>
-  <header>
-    <div class="container">
-      <div class="logo"><a href="index.html">DONGHUA STREAM</a></div>
-      <div class="search-bar">
-        <form action="index.html" method="get">
-          <input type="text" name="search" placeholder="Cari donghua...">
-        </form>
-      </div>
-    </div>
-  </header>
+<body class="min-h-screen">
 
-  <main>
-    <div class="container">
-      <h1>Legendary Twins: Beyond the Sky</h1>
-      <div class="detail-info">
-        <div class="poster-wrapper">
-          <img src="https://placehold.co/250x350/e50914/ffffff?text=Legendary+Twins" alt="Legendary Twins Poster">
-        </div>
-        <div class="info-section">
-          <div class="metadata">
-            <span>Ongoing</span>
-            <span>40+ Episode</span>
-            <span>2024</span>
-          </div>
-          <p>
-            Kisah epik dua saudara kembar di dunia persilatan. 
-            Satunya tumbuh di istana, satunya di jalanan, tapi keduanya ditakdirkan bertemu dalam konflik besar.
-          </p>
-          
-          <!-- Label/Kategori -->
-          <div class="labels">
-            <h3>Genre / Label</h3>
-            <div class="label-list">
-              <a href="index.html?label=action">Action</a>
-              <a href="index.html?label=fantasy">Fantasy</a>
-              <a href="index.html?label=movie">Movie</a>
+    <!-- HEADER: Mirip dengan Halaman Utama -->
+    <!-- Border diubah menjadi orange-700 -->
+    <header class="sticky top-0 z-50 bg-gray-900 shadow-xl border-b border-orange-700/50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Navigasi Kiri (Logo/Link Utama) - Tautan kembali ke index.html -->
+            <!-- Warna logo diubah ke orange-500 dengan hover ke orange-400 -->
+            <a href="index.html" class="text-2xl font-extrabold text-orange-500 tracking-wider hover:text-orange-400 transition duration-300">
+                Donghua Stream
+            </a>
+
+            
+            <!-- Status Auth (Dipertahankan) -->
+            <div class="flex items-center space-x-4">
+                <div id="auth-status" class="text-sm">Memuat...</div>
             </div>
-          </div>
+        </nav>
+    </header>
+
+    <!-- KONTEN UTAMA Halaman Detail -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        
+        <!-- Judul Donghua (Warna diubah menjadi ORANGE-500) -->
+        <h1 class="text-4xl sm:text-5xl font-extrabold mb-6 text-orange-500">Battle Through the Heavens (BTTH)</h1>
+        
+        <!-- Layout 2 Kolom (Video dan Daftar Episode) -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            <!-- Kolom Kiri (Video Player dan Deskripsi) -->
+            <div class="lg:col-span-2">
+                <!-- Video Player Utama -->
+                <!-- Menambahkan shadow-orange-900/50 untuk bayangan oranye gelap -->
+                <div class="video-container mb-6 bg-gray-900 rounded-xl shadow-2xl shadow-orange-900/50">
+                    <!-- Embed Video Placeholder (Ganti dengan kode embed Anda yang sebenarnya) -->
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=7YjGgX8T0n9Z8t8r" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+
+                <!-- Detail dan Deskripsi -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700">
+                    <h2 class="text-3xl font-bold mb-4 text-white">Informasi</h2>
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-4 text-sm">
+                        <div>
+                            <p class="text-gray-400">Genre:</p>
+                            <!-- Warna genre diubah ke orange-400 -->
+                            <p class="font-semibold text-orange-400">Action, Fantasy, Romance</p>
+                        </div>
+                        <div>
+                            <p class="text-gray-400">Total Episode:</p>
+                            <p class="font-semibold text-white">Season 5 - 104 Episode</p>
+                        </div>
+                        <div>
+                            <p class="text-gray-400">Status:</p>
+                            <!-- WARNA STATUS Ongoing diubah ke orange-500 -->
+                            <p class="font-semibold text-orange-500">Ongoing</p>
+                        </div>
+                        <div>
+                            <p class="text-gray-400">Studio:</p>
+                            <p class="font-semibold text-white">Motion Magic</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mb-2 text-white">Sinopsis</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Di dunia di mana kekuatan mendominasi segalanya, Xiao Yan, seorang jenius muda yang kehilangan kekuatannya, bertekad untuk membalas dendam dan merebut kembali kejayaannya. Dengan bantuan Yao Lao, seorang alkemis legendaris, ia memulai perjalanan kultivasi yang berbahaya, menghadapi musuh kuat dan menemukan rahasia kuno yang mengubah nasibnya.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Kolom Kanan (Daftar Episode) -->
+            <div class="lg:col-span-1">
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700">
+                    <h2 class="text-3xl font-bold mb-4 text-white border-b border-gray-700 pb-2">Daftar Episode</h2>
+                    <div class="episode-list space-y-2 max-h-96 overflow-y-auto pr-2">
+                        
+                        <!-- Loop Daftar Episode -->
+                        <!-- Warna hover episode diubah menjadi orange-700/70 -->
+                        <a href="#" class="block p-3 bg-gray-700 hover:bg-orange-700/70 rounded-lg transition duration-200">
+                            <span class="font-semibold text-lg text-white">Episode 104 (Terbaru)</span>
+                            <span class="text-sm text-gray-300 float-right">1 Hari Lalu</span>
+                        </a>
+                        <a href="#" class="block p-3 bg-gray-700 hover:bg-orange-700/70 rounded-lg transition duration-200">
+                            <span class="font-semibold text-lg text-white">Episode 103</span>
+                            <span class="text-sm text-gray-300 float-right">Minggu Lalu</span>
+                        </a>
+                        <!-- Contoh episode lainnya (Dummy) -->
+                        <a href="#" class="block p-3 bg-gray-700 hover:bg-orange-700/70 rounded-lg transition duration-200"><span class="font-semibold text-lg text-white">Episode 102</span></a>
+                        <a href="#" class="block p-3 bg-gray-700 hover:bg-orange-700/70 rounded-lg transition duration-200"><span class="font-semibold text-lg text-white">Episode 101</span></a>
+                        <a href="#" class="block p-3 bg-gray-700 hover:bg-orange-700/70 rounded-lg transition duration-200"><span class="font-semibold text-lg text-white">Episode 100</span></a>
+                        <a href="#" class="block p-3 bg-gray-700 hover:bg-orange-700/70 rounded-lg transition duration-200"><span class="font-semibold text-lg text-white">Episode 99</span></a>
+                        <a href="#" class="block p-3 bg-gray-700 hover:bg-orange-700/70 rounded-lg transition duration-200"><span class="font-semibold text-lg text-white">Episode 98</span></a>
+                        <a href="#" class="block p-3 bg-gray-700 hover:bg-orange-700/70 rounded-lg transition duration-200"><span class="font-semibold text-lg text-white">Episode 97</span></a>
+                        <a href="#" class="block p-3 bg-gray-700 hover:bg-orange-700/70 rounded-lg transition duration-200"><span class="font-semibold text-lg text-white">Episode 96</span></a>
+                        <a href="#" class="block p-3 bg-gray-700 hover:bg-orange-700/70 rounded-lg transition duration-200"><span class="font-semibold text-lg text-white">Episode 95</span></a>
+                        <a href="#" class="block p-3 bg-gray-700 hover:bg-orange-700/70 rounded-lg transition duration-200"><span class="font-semibold text-lg text-white">Episode 94</span></a>
+                        <a href="#" class="block p-3 bg-gray-700 hover:bg-orange-700/70 rounded-lg transition duration-200"><span class="font-semibold text-lg text-white">Episode 93</span></a>
+                        <a href="#" class="block p-3 bg-gray-700 hover:bg-orange-700/70 rounded-lg transition duration-200"><span class="font-semibold text-lg text-white">Episode 92</span></a>
+                        <a href="#" class="block p-3 bg-gray-700 hover:bg-orange-700/70 rounded-lg transition duration-200"><span class="font-semibold text-lg text-white">Episode 91</span></a>
+                        <a href="#" class="block p-3 bg-gray-700 hover:bg-orange-700/70 rounded-lg transition duration-200"><span class="font-semibold text-lg text-white">Episode 90</span></a>
+
+                        <!-- Akhir Loop Daftar Episode -->
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
 
-      <!-- Daftar Episode -->
-      <div class="episode-list">
-        <h2>Daftar Episode</h2>
-        <ul>
-          <li><a href="episode-1.html">Episode 1</a></li>
-          <li><a href="episode-2.html">Episode 2</a></li>
-          <li><a href="episode-3.html">Episode 3</a></li>
-          <li><a href="episode-4.html">Episode 4</a></li>
-        </ul>
-      </div>
-    </div>
-  </main>
+    </main>
 
-  <footer>
-    <p>&copy; 2025 Donghua Stream</p>
-  </footer>
+    <!-- FOOTER -->
+    <!-- Border diubah menjadi orange-700 -->
+    <footer class="mt-12 py-6 bg-gray-900 border-t border-orange-700/50 text-center text-gray-400">
+        &copy; 2024 Donghua Stream Project. Dibuat dengan Tailwind CSS. Diuji coba oleh Gemini.
+    </footer>
+
+    <!-- Logika Inisialisasi Firebase (Dipertahankan untuk konsistensi) -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+        
+        const firebaseConfig = JSON.parse(typeof __firebase_config !== 'undefined' ? __firebase_config : '{}');
+        let auth;
+
+        if (Object.keys(firebaseConfig).length > 0) {
+            const app = initializeApp(firebaseConfig);
+            auth = getAuth(app);
+            // const db = getFirestore(app); // db tidak digunakan di halaman ini, jadi bisa dikomentari
+        } else {
+            console.warn("Firebase configuration not found. Skipping initialization.");
+        }
+
+        async function authenticate() {
+            if (!auth) return;
+
+            try {
+                if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
+                    await signInWithCustomToken(auth, __initial_auth_token);
+                } else {
+                    await signInAnonymously(auth);
+                }
+            } catch (error) {
+                console.error("Firebase Auth Error:", error);
+                document.getElementById('auth-status').textContent = 'Error Auth';
+                return;
+            }
+
+            // Memperbarui status autentikasi
+            onAuthStateChanged(auth, (user) => {
+                const statusElement = document.getElementById('auth-status');
+                // Mengubah warna status auth menjadi orange-500
+                if (user) {
+                    statusElement.classList.remove('text-green-400');
+                    statusElement.classList.add('text-orange-500');
+                    statusElement.textContent = `User ID: ${user.uid.substring(0, 8)}...`;
+                } else {
+                    statusElement.classList.remove('text-yellow-400');
+                    statusElement.classList.add('text-orange-300'); // Sedikit lebih terang untuk status anonim
+                    statusElement.textContent = 'Anonim';
+                }
+            });
+        }
+        
+        // Jalankan semua setelah halaman dimuat
+        window.onload = function () {
+            authenticate();
+        }
+
+    </script>
 </body>
 </html>
